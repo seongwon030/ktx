@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+import IdealTypeGame from "./components/IdealTypeGame";
+
+const AppContainer = styled.div`
+  min-height: 100vh;
+  background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+  padding: 2rem;
+`;
+
+const Title = styled.h1`
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContainer>
+      <Title>이상형 월드컵 소개팅</Title>
+      <IdealTypeGame />
+    </AppContainer>
   );
 }
 
